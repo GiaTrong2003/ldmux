@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import './tokens.css';
+@import '@xyflow/react/dist/style.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-ui);
+  background: var(--bg-0);
+  color: var(--fg-0);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+code, pre, kbd {
+  font-family: var(--font-mono);
+  font-size: 0.95em;
+}
+
+button {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-2);
+  color: var(--fg-0);
+  cursor: pointer;
+  transition: background var(--t-fast) var(--ease),
+              border-color var(--t-fast) var(--ease),
+              transform var(--t-fast) var(--ease);
+}
+button:hover:not(:disabled) {
+  background: var(--bg-hover);
+  border-color: var(--fg-dim);
+}
+button:active:not(:disabled) { transform: translateY(1px); }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+button.primary:hover:not(:disabled) { background: var(--accent-hover); border-color: var(--accent-hover); }
+
+button.danger {
+  background: transparent;
+  border-color: var(--err);
+  color: var(--err);
+}
+button.danger:hover:not(:disabled) { background: var(--err-bg); }
+
+button.ghost {
+  background: transparent;
+  border-color: transparent;
+}
+button.ghost:hover:not(:disabled) { background: var(--bg-2); }
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: 13px;
+  padding: 7px 10px;
+  background: var(--bg-0);
+  color: var(--fg-0);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--t-fast) var(--ease);
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--border-strong);
+}
+textarea { min-height: 72px; resize: vertical; }
+
+a { color: var(--info); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-0); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: var(--radius); }
+::-webkit-scrollbar-thumb:hover { background: var(--fg-dim); }

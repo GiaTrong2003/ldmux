@@ -1,0 +1,57 @@
+:root {
+  /* Surfaces */
+  --bg-0: #0d1117;
+  --bg-1: #161b22;
+  --bg-2: #21262d;
+  --bg-hover: #1c2128;
+
+  /* Borders */
+  --border: #30363d;
+  --border-muted: #21262d;
+  --border-strong: #58a6ff;
+
+  /* Foreground */
+  --fg-0: #c9d1d9;
+  --fg-muted: #8b949e;
+  --fg-dim: #6e7681;
+
+  /* Semantic */
+  --ok: #3fb950;
+  --ok-bg: #3fb95020;
+  --warn: #d29922;
+  --warn-bg: #d2992220;
+  --err: #f85149;
+  --err-bg: #f8514920;
+  --accent: #1f6feb;
+  --accent-hover: #1158c7;
+  --info: #58a6ff;
+
+  /* Spacing (8px grid with a 4px half-step) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius: 6px;
+  --radius-lg: 10px;
+  --radius-pill: 999px;
+
+  /* Typography */
+  --font-ui: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Cascadia Code', 'Consolas', monospace;
+
+  /* Motion */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --t-fast: 120ms;
+  --t-med: 180ms;
+
+  /* Shadow */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+}

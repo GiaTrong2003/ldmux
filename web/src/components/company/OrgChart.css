@@ -1,0 +1,58 @@
+.org-chart {
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: var(--space-3);
+}
+
+.react-flow__controls {
+  background: var(--bg-0);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: none;
+}
+.react-flow__controls button {
+  background: var(--bg-1);
+  color: var(--fg-0);
+  border-bottom: 1px solid var(--border-muted);
+}
+.react-flow__controls button:hover { background: var(--bg-hover); }
+.react-flow__controls button svg { fill: var(--fg-0); }
+
+.react-flow__minimap {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.react-flow__attribution { display: none !important; }
+
+.org-chart-panel {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  background: var(--bg-0);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 6px 8px;
+}
+.org-chart-hint {
+  font-size: 11px;
+  color: var(--fg-dim);
+}
+
+/* Edges: clickable, glow when delegating */
+.react-flow__edge { cursor: pointer; }
+.react-flow__edge-path { transition: stroke 0.2s; }
+.react-flow__edge:hover .react-flow__edge-path { stroke: #ffaa00 !important; stroke-width: 2.4 !important; }
+.react-flow__edge:hover .react-flow__edge-text { fill: #ffaa00; }
+
+@keyframes ldmux-edge-glow {
+  0%   { filter: drop-shadow(0 0 0 rgba(255, 170, 0, 0)); }
+  40%  { filter: drop-shadow(0 0 6px rgba(255, 170, 0, 0.85)); }
+  100% { filter: drop-shadow(0 0 2px rgba(255, 170, 0, 0.45)); }
+}
+.edge-delegated .react-flow__edge-path {
+  animation: ldmux-edge-glow 1.4s ease-in-out infinite;
+}
+

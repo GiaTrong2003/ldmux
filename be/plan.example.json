@@ -1,0 +1,22 @@
+{
+  "name": "billing-feature",
+  "layout": "vertical",
+  "gitWorktree": false,
+  "workers": [
+    {
+      "name": "db-schema",
+      "prompt": "Create the database schema and migrations for the billing feature. Include tables for invoices, payments, and subscriptions.",
+      "cwd": "."
+    },
+    {
+      "name": "api-endpoints",
+      "prompt": "Build REST API endpoints for billing: GET/POST /invoices, GET/POST /payments, GET /subscriptions. Use Express.js with proper validation.",
+      "cwd": "."
+    },
+    {
+      "name": "ui-components",
+      "prompt": "Create React components for the billing dashboard: InvoiceList, PaymentForm, SubscriptionCard. Use TypeScript and Tailwind CSS.",
+      "cwd": "."
+    }
+  ]
+}

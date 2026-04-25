@@ -1,0 +1,92 @@
+.timeline-empty, .timeline-error {
+  padding: 16px; text-align: center; opacity: 0.85;
+}
+.timeline-error { color: #ff6b6b; }
+
+.timeline-footer { display: flex; align-items: center; gap: 8px; flex: 1; }
+.timeline-path {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 11px;
+  opacity: 0.65;
+  margin-right: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 60%;
+}
+
+.turn-block {
+  border: 1px solid var(--border, #2a2f3a);
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  background: var(--surface, #11141a);
+}
+.turn-header {
+  display: flex; gap: 8px; align-items: baseline;
+  font-size: 13px; margin-bottom: 6px;
+  border-bottom: 1px dashed var(--border, #2a2f3a);
+  padding-bottom: 6px;
+}
+.turn-index { font-weight: 600; }
+.muted { opacity: 0.65; }
+
+.turn-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 10px;
+  margin: 6px 0;
+  font-size: 12.5px;
+}
+.turn-row .role { font-weight: 500; opacity: 0.85; }
+.turn-row pre {
+  margin: 0;
+  background: #0a0c10;
+  border: 1px solid var(--border, #2a2f3a);
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 12px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 280px;
+  overflow: auto;
+}
+
+details.turn-row { display: block; }
+details.turn-row summary { cursor: pointer; padding: 4px 0; }
+details.thinking summary .role { opacity: 0.7; }
+
+.tool-call {
+  margin: 6px 0; padding: 6px 8px;
+  border: 1px solid var(--border, #2a2f3a);
+  border-radius: 4px;
+  background: #0d1016;
+}
+.tool-call.err { border-color: #5a2222; }
+.tool-call summary { cursor: pointer; font-size: 13px; }
+.tool-call .err-badge { color: #ff6b6b; font-weight: 600; }
+.tool-call-body {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+  margin-top: 6px;
+}
+.tool-call-body label {
+  display: block; font-size: 11px; opacity: 0.65; margin-bottom: 2px;
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
+.tool-call-body pre {
+  margin: 0; background: #0a0c10;
+  border: 1px solid var(--border, #2a2f3a);
+  border-radius: 4px; padding: 6px 8px;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 11.5px;
+  white-space: pre-wrap; word-break: break-word;
+  max-height: 240px; overflow: auto;
+}
+
+.turn-usage {
+  margin-top: 6px;
+  font-size: 11.5px;
+  opacity: 0.7;
+  font-family: var(--font-mono, ui-monospace, monospace);
+}

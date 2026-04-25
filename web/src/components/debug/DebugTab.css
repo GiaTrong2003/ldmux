@@ -1,0 +1,52 @@
+.debug-tab { display: flex; flex-direction: column; gap: 12px; }
+
+.debug-toolbar {
+  display: flex; align-items: center; gap: 12px;
+  padding: 8px 12px; border: 1px solid var(--border, #2a2f3a);
+  border-radius: 6px; background: var(--surface, #11141a);
+}
+.debug-toolbar label { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; }
+.debug-toolbar select { background: var(--bg, #0c0e13); color: inherit; border: 1px solid var(--border, #2a2f3a); padding: 2px 6px; border-radius: 4px; }
+.debug-count { margin-left: auto; opacity: 0.7; font-size: 13px; }
+
+.debug-list { display: flex; flex-direction: column; gap: 6px; }
+
+.live-proc-row {
+  border: 1px solid var(--border, #2a2f3a);
+  border-radius: 6px;
+  background: var(--surface, #11141a);
+  overflow: hidden;
+}
+.live-proc-main {
+  display: grid;
+  grid-template-columns: 140px 80px 80px 1fr 2fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 13px;
+}
+.live-proc-cell.muted { opacity: 0.7; }
+.live-proc-cell.cmd {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.85;
+}
+.live-proc-cell.actions { display: flex; gap: 6px; }
+
+.live-proc-tail {
+  border-top: 1px solid var(--border, #2a2f3a);
+  padding: 8px 12px;
+  background: #0a0c10;
+}
+.live-proc-tail-meta {
+  display: flex; justify-content: space-between;
+  font-size: 12px; opacity: 0.7; margin-bottom: 4px;
+}
+.live-proc-tail pre {
+  max-height: 280px; overflow: auto;
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 12px; line-height: 1.45;
+  margin: 0; white-space: pre-wrap; word-break: break-word;
+}

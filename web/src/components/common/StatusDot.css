@@ -1,0 +1,32 @@
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--fg-dim);
+  flex-shrink: 0;
+}
+.status-dot.running { background: var(--warn); box-shadow: 0 0 8px var(--warn); }
+.status-dot.waiting { background: var(--ok); }
+.status-dot.done    { background: var(--ok); }
+.status-dot.error   { background: var(--err); }
+.status-dot.pending { background: var(--info); }
+.status-dot.sleep   { background: var(--fg-dim); }
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  background: var(--bg-2);
+  color: var(--fg-muted);
+}
+.status-badge.running { background: var(--warn-bg); color: var(--warn); }
+.status-badge.waiting { background: var(--ok-bg); color: var(--ok); }
+.status-badge.done    { background: var(--ok-bg); color: var(--ok); }
+.status-badge.error   { background: var(--err-bg); color: var(--err); }
+.status-badge.pending { background: #58a6ff20; color: var(--info); }
+.status-badge.sleep   { background: var(--bg-2); color: var(--fg-dim); }

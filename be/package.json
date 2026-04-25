@@ -1,0 +1,36 @@
+{
+  "name": "ldmux",
+  "version": "1.0.0",
+  "description": "Local dmux - Multi-agent orchestrator for Windows Terminal",
+  "main": "dist/index.js",
+  "bin": {
+    "ldmux": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "src/gui/public"
+  ],
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "ts-node src/index.ts gui",
+    "build": "tsc && node -e \"const fs=require('fs');fs.cpSync('src/gui/public','dist/gui/public',{recursive:true});fs.chmodSync('dist/index.js',0o755)\"",
+    "web:install": "cd ../web && npm install",
+    "web:dev": "cd ../web && npm run dev",
+    "web:build": "cd ../web && npm run build",
+    "build:all": "npm run web:build && npm run build",
+    "build:bundle": "npm run web:build && ncc build src/index.ts -o release --minify --source-map && node -e \"const fs=require('fs'),p=require('path');fs.cpSync('src/gui/public','release/public',{recursive:true});fs.chmodSync('release/index.js',0o755);for(const f of fs.readdirSync('release',{recursive:true})){if(typeof f==='string'&&f.endsWith('.d.ts'))fs.rmSync(p.join('release',f))}\""
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "chalk": "^4.1.2",
+    "chokidar": "^3.6.0",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.0",
+    "@vercel/ncc": "^0.38.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

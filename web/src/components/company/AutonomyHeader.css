@@ -1,0 +1,36 @@
+.company-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: var(--space-3);
+}
+.company-header-left { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+.company-header-actions { display: flex; gap: var(--space-2); }
+.company-header-hint { font-size: 12px; color: var(--fg-muted); }
+
+.autonomy-toggle {
+  display: inline-flex;
+  background: var(--bg-0);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.autonomy-toggle button {
+  background: transparent;
+  color: var(--fg-muted);
+  border: none;
+  border-radius: 0;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+.autonomy-toggle button:hover { background: var(--bg-2); color: var(--fg-0); }
+.autonomy-toggle button.active {
+  background: var(--accent);
+  color: #fff;
+}

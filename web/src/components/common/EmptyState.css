@@ -1,0 +1,23 @@
+.empty-state {
+  background: var(--bg-1);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-5);
+  text-align: center;
+  color: var(--fg-muted);
+}
+.empty-state h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--fg-0);
+  margin-bottom: var(--space-2);
+}
+.empty-state p { margin-bottom: var(--space-3); font-size: 13px; }
+.empty-state code {
+  background: var(--bg-0);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  border: 1px solid var(--border);
+}
+.empty-action { display: flex; justify-content: center; gap: var(--space-2); }

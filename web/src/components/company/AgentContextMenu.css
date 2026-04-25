@@ -1,0 +1,41 @@
+.agent-ctx-menu {
+  position: fixed;
+  z-index: 1000;
+  min-width: 180px;
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  font-size: 12.5px;
+}
+.agent-ctx-head {
+  padding: 8px 10px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border-muted);
+  margin-bottom: 4px;
+}
+.agent-ctx-menu button {
+  all: unset;
+  padding: 7px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--fg-0);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.agent-ctx-menu button:hover { background: var(--bg-hover); }
+.agent-ctx-menu button.danger { color: var(--err); }
+.agent-ctx-menu button.danger:hover { background: rgba(248, 81, 73, 0.12); }
+.agent-ctx-sep {
+  height: 1px;
+  background: var(--border-muted);
+  margin: 4px 0;
+}

@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+web/node_modules/
+
+# Build output
+dist/
+release/
+
+# ldmux runtime data
+.ldmux/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Env
+.env
+.env.local
+
+# Logs
+*.log

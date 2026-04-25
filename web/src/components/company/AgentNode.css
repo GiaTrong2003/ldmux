@@ -1,0 +1,55 @@
+.agent-node {
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2) var(--space-3);
+  width: 200px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--t-fast) var(--ease),
+              border-color var(--t-fast) var(--ease),
+              box-shadow var(--t-fast) var(--ease);
+}
+.agent-node:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+.agent-node.running { border-color: var(--warn); }
+.agent-node.waiting { border-color: var(--ok); }
+.agent-node.error   { border-color: var(--err); }
+
+.agent-node-head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: 2px;
+}
+.agent-node-name {
+  font-weight: 600;
+  font-size: 13px;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.agent-node-badge {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.5px;
+}
+.agent-node-badge.auto   { background: var(--ok-bg); color: var(--ok); }
+.agent-node-badge.manual { background: var(--warn-bg); color: var(--warn); }
+
+.agent-node-role {
+  font-size: 11px;
+  color: var(--fg-muted);
+  margin-bottom: 4px;
+}
+.agent-node-stats {
+  font-size: 10px;
+  color: var(--fg-dim);
+  font-family: var(--font-mono);
+}
