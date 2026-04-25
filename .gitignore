@@ -1,5 +1,7 @@
 node_modules/
 *.zip
+!be/node_modules.zip
+!web/node_modules.zip
 .env
 .env.local
 dist/
